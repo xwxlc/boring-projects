@@ -3,6 +3,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// rem
+import 'amfe-flexible/index.js'
+// vant
+import './plugins/vant'
+// cookie
+import './plugins/cookie'
+
 Vue.config.productionTip = false
 
 new Vue({

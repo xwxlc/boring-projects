@@ -4,8 +4,32 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="icon" href="<%= BASE_URL %>loading.gif" />
+    <title>无趣的商城</title>
+    <style>
+      .load-animation {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+      }
+      #load-animation {
+        width: 35%;
+        display: block;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        margin: auto;
+      }
+    </style>
   </head>
   <body>
     <noscript>
@@ -15,7 +39,13 @@
         continue.</strong
       >
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div class="load-animation">
+        <div id="load-animation">
+          <img src=/loading.gif rel=preload style="width: 100%;">
+        </div>
+      </div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
